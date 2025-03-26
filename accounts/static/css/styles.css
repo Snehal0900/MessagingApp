@@ -1,0 +1,67 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #E3F2FD;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+/* Form Container */
+.form-container {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    margin: 15px;
+    text-align: center;
+}
+
+/* Form Fields */
+input {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Submit Button */
+button {
+    width: 100%;
+    padding: 10px;
+    background: #4facfe;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+button:hover {
+    background: #00c6ff;
+}
+
+p {
+    margin-top: 15px;
+}
+
+a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.error {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+}

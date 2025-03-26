@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="container">
+    <!-- Sidebar for chat list -->
+    <div class="sidebar">
+        <h3>Chats</h3>
+
+        <input type="text" id="userSearch" placeholder="Search users..." />
+        <ul id="searchResults"></ul>
+
+        <ul id="chatList">
+            {% for conversation in conversations %}
+                <li class="chat-item" data-conversation-id="{{ conversation.id }}">
+                    {% for participant in conversation.participants.all %}
+                        {% if participant != request.user %}
+                            {{ participant.username }}
+                        {% endif %}
+                    {% endfor %}
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <!-- Chat container -->
+    <div class="chat-container">
+        <h3 id="recipientUsername">Select a chat</h3>
+        <div class="messages" id="messages"></div>
+
+        <div class="input-container">
+            <form id="messageForm">
+                {% csrf_token %}
+                <input type="hidden" id="conversationId">
+                <input type="text" id="messageInput" name="text" placeholder="Type a message..." required>
+                <button id="sendButton" type="submit">Send</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script>
+    var conversationId = "{{ conversation_id }}";
+    var username = "{{ user.username }}"; // Get logged-in username
+</script>
+
+{% load static %}
+<script src="{% static 'js/script.js' %}" defer></script>
+
+{% endblock %}

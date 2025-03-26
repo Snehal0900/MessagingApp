@@ -1,0 +1,250 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+   
+}
+
+header {
+    background: #075e54;
+    color: white;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+li {
+    list-style: none;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+    background: #128c7e;
+    border-radius: 5px;
+}
+
+.container {
+    display: flex;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 280px;
+    background: #075e54;
+    color: white;
+    padding: 15px;
+    overflow-y: auto;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin: 10px;
+    height: 470px;
+}
+
+.sidebar h3 {
+    text-align: center;
+    padding: 10px;
+    letter-spacing: 1px;
+    font-weight: bold;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#userSearch {
+    width: 90%;
+    padding: 8px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    color: white;
+    background: rgba(255, 255, 255, 0.2);
+    transition: background 0.3s ease-in-out, padding 0.2s;
+}
+
+.search-box-collapsed {
+    padding: 5px; /* Reduce padding */
+    font-size: 14px;
+    opacity: 0.7; /* Light fade */
+    margin-bottom: 10px;
+}
+
+#userSearch::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+#userSearch:focus {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 10px;
+}
+
+#searchResults {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+    text-align: center; 
+}
+
+#searchResults li {
+    padding: 8px;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+    margin-bottom: 5px;
+}
+
+#searchResults li:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+#chatList {
+    padding: 0;
+    margin: 0;
+}
+
+.chat-item {
+    padding: 12px;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.1);
+    font-size: 16px;
+    height: 20px; 
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.chat-item:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Chat Container */
+.chat-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background: white;
+    width: 100%;
+    margin: 10px;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    display: block; 
+    height: 470px;
+}
+
+.chat-container h3 {
+    text-align: center;
+    padding: 10px;
+    border-bottom: 2px solid #ccc;
+    font-size: 16px;
+    font-weight: bold;
+    background: #eee;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#recipientUsername {
+    text-align: center;
+    color: #075e54;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.messages {
+    display: flex;
+    flex-direction: column;
+    height: 300px;
+    overflow-y: auto;
+    padding-bottom: 10px;
+    padding: 10px;
+    gap: 5px;
+}
+
+.message {
+    max-width: 70%;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 5px;
+    word-wrap: break-word;
+    font-size: 14px;
+    position: relative;
+}
+
+/* Sender Messages */
+.sent {
+    align-self: flex-end;
+    background: #dcf8c6;
+    border-top-right-radius: 0;
+}
+
+/* Receiver Messages */
+.received {
+    align-self: flex-start;
+    background: #ffffff;
+    border-top-left-radius: 0;
+}
+
+/* Add shadows for a bubble effect */
+.sent, .received {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.timestamp {
+    display: block;
+    font-size: 12px;
+    color: gray;
+    margin-top: 2px;
+    text-align: right;
+}
+
+/* Message Input */
+.input-container {
+    display: flex;
+    padding: 10px;
+    align-items: center;
+    background: #fff;
+    border-top: 1px solid #ccc;
+}
+
+.input-container form {
+    display: flex; 
+    flex: 1; 
+}
+
+.input-container input {
+    flex: 1;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    font-size: 16px;
+    width: 80%;
+}
+
+.input-container button {
+    padding: 12px 15px;
+    margin-left: 10px;
+    background: #128c7e;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.input-container button:hover {
+    background: #0a7268;
+}
+
